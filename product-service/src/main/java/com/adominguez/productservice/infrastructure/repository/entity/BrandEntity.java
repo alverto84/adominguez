@@ -13,10 +13,6 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-/**
- * @author Núria Curto
- *
- */
 @Entity
 @Table(name = "IN_BRAND")
 @Getter

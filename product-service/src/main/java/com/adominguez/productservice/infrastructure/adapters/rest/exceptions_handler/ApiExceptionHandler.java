@@ -19,24 +19,25 @@ public class ApiExceptionHandler extends ResponseEntityExceptionHandler {
 
   @ExceptionHandler(IncorrectBrandIdException.class)
   public ResponseEntity<ErrorDTO> springHandleIncorrectBrand(Exception ex, WebRequest request) throws IOException {
-    return this.formateErrorResponse(ex, request);
+    return this.getNotFoundError(ex, request);
   }
 
   @ExceptionHandler(IncorrectProductIdException.class)
   public ResponseEntity<ErrorDTO> springHandleIncorrectProduct(Exception ex, WebRequest request) throws IOException {
-    return this.formateErrorResponse(ex, request);
+    return this.getNotFoundError(ex, request);
   }
 
   @ExceptionHandler(PriceNotFoundException.class)
   public ResponseEntity<ErrorDTO> springHandlePriceNotFound(Exception ex, WebRequest request) throws IOException {
-    return this.formateErrorResponse(ex, request);
+    return this.getNotFoundError(ex, request);
   }
 
-  private ResponseEntity<ErrorDTO> formateErrorResponse(Exception ex, WebRequest request) throws IOException {
+  private ResponseEntity<ErrorDTO> getNotFoundError(Exception ex, WebRequest request) throws IOException {
     ErrorDTO errorDto = ErrorDTO.builder()
         .timestamp(LocalDateTime.now())
-        .status(HttpStatus.INTERNAL_SERVER_ERROR.value())
+        .status(HttpStatus.NO_CONTENT.value())
         .error(ex.getMessage()).build();
-    return new ResponseEntity<>(errorDto, HttpStatus.INTERNAL_SERVER_ERROR);
+    return new ResponseEntity<>(errorDto, HttpStatus.NO_CONTENT);
   }
+
 }

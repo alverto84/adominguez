@@ -1,0 +1,17 @@
+
+A
+java:S1068"+Remove this unused "priceId" private field.(ËÎ©æ
+H
+java:S1068"-Remove this unused "startDate" private field.(Ì…¨Íøÿÿÿÿ
+@
+java:S1068"+Remove this unused "endDate" private field.(ÛÖë	
+C
+java:S1068"-Remove this unused "priceList" private field.(©˜£±
+B
+java:S1068",Remove this unused "priority" private field.(”²Ä¯
+?
+java:S1068")Remove this unused "price" private field.(ÿí
+G
+java:S1068",Remove this unused "currency" private field.(´£±òıÿÿÿÿ
+*
+java:S1700"Rename field "price"(ÿí
