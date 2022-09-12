@@ -11,7 +11,7 @@
 	<groupId>com.tutorial</groupId>
 	<artifactId>product-service</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
-	<name>user-service</name>
+	<name>product-service</name>
 	<description>Service product inditext technical test</description>
 	<properties>
 		<java.version>11</java.version>
